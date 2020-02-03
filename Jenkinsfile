@@ -1,58 +1,45 @@
 pipeline{
-     agent none
-     stages{
-         stage('codecheckout'){
+    agent none
+    stages{
+        stage('codecheckout'){
             agent{label 'master'}
             steps{
-               script{
-                   sh "echo hi hell how are you"
-               }
+                script{
+                    sh "echo hi helo how  are u"
+                }
             }
-         }
-          stage('build'){
-             agent{label 'master'}
-             steps{
-               script{
-                   sh "echo hi hello what are doing"
-               }
-             }
-          }
-          stage('test'){
-              agent{label 'master'}
-              steps{
-                 script{
-                     sh "echo hi where are you"
-                 }
-              }
-          }
-          stage('deploy'){
-              agent{label 'master'}
-              steps{
-                 script{
-                      sh "echo hi heloo how are uuuuuuuu"
-                 }
-              }
-          }
-          stage('delivery'){
-               agent{label 'master'}
-               stpes{
-                   script{
-                       sh "echo hi hello"
-                   }
-               }
-          }
-     }
+        }
+        stage('build'){
+            agent{label 'master'}
+            steps{
+                script{
+                    sh "echo here is doing build the code"
+                }
+            }
+        }
+        stage('test'){
+            agent{label 'master'}
+            steps{
+                script{
+                    sh "echo hi hello here testing"
+                }
+            }
+        }
+        stage('deploy'){
+            agent{label 'master'}
+            steps{
+                script{
+                    sh "echo hi hello hoe are you deployment"
+                }
+            }
+        }
+        stage('delivery'){
+            agent{label'master'}
+            steps{
+                script{
+                    sh "echo hi hello hers delivery the code finally"
+                }
+            }
+        }
+    }
 }
-          
-                 
-                   
-     
-     
-            
-                      
-                      
-                  
-
-                   
-                  
-            
